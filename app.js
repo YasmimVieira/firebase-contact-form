@@ -9,17 +9,14 @@ const firebaseConfig = {
     measurementId: "G-9LEWFBML5B"
 };
 firebase.initializeApp(firebaseConfig);
-console.log(firebase)
 const firestore = firebase.firestore();
-console.log(firestore)
 const submitBtn = document.querySelector('#submit')
-console.log(submitBtn)
+
 let userName = document.querySelector('#userName');
 let userEmail = document.querySelector('#userEmail');
 let userMessage = document.querySelector('#userMessage');
-console.log(userName, userEmail, userMessage)
+
 const db = firestore.collection("contactData");
-console.log(db)
 submitBtn.addEventListener('click', function() {
     let userNameInput = userName.value;
     let userEmailInput = userEmail.value;
